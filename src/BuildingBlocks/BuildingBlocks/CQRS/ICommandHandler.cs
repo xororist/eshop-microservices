@@ -2,7 +2,7 @@
 
 namespace BuildingBlocks.CQRS;
 
-public interface ICommandandler<in TCommnad> 
+public interface ICommandHandler<in TCommnad> 
     : ICommandHandler<TCommnad, Unit>
     where TCommnad : ICommand<Unit>
 {
@@ -14,3 +14,4 @@ public interface ICommandHandler<in TCommand, TReponse>
     where TReponse : notnull
 {
 }
+
